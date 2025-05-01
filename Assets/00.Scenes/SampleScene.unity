@@ -270,6 +270,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectItemGrid: {fileID: 0}
+  items:
+  - {fileID: 11400000, guid: 1677fcce752a45543bc65018bc02ef04, type: 2}
+  - {fileID: 11400000, guid: dbe2dd335b2208f43b9d0a0bfd85f968, type: 2}
+  - {fileID: 11400000, guid: d36482236d6f3374fa2c32d34f92890b, type: 2}
+  itemPrefab: {fileID: 2529006638401247811, guid: 5cc6b00b8c536ba45b8fa14a02af71db, type: 3}
+  canvasTransform: {fileID: 682902630}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1163, y: -504}
+  m_AnchoredPosition: {x: 1160, y: -500}
   m_SizeDelta: {x: 600, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &862725515
@@ -595,7 +601,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeWidth: 6
   gridSizeHeight: 5
-  inventoryItemPrefab: {fileID: 2529006638401247811, guid: 5cc6b00b8c536ba45b8fa14a02af71db, type: 3}
 --- !u!114 &862725516
 MonoBehaviour:
   m_ObjectHideFlags: 0

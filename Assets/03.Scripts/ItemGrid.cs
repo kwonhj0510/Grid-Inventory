@@ -73,13 +73,13 @@ public class ItemGrid : MonoBehaviour
     /// <param name="posY"></param>
     public void PlaceItem(InventoryItem inventoryItem, int posX, int posY)
     {
-        RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
+        RectTransform rect = inventoryItem.GetComponent<RectTransform>();
         inventoryItemSlot[posX, posY] = inventoryItem;
 
         Vector2 position = new Vector2();
-        position.x = posX * tileSizeWidth + tileSizeWidth / 2;
-        position.y = -(posY * tileSizeHeight + tileSizeHeight / 2);
+        position.x = posX * tileSizeWidth + tileSizeWidth / 2 + rectTransform.localPosition.x;
+        position.y = -(posY * tileSizeHeight + tileSizeHeight / 2) + rectTransform.localPosition.y;
 
-        rectTransform.localPosition = position;
+        rect.localPosition = position;
     }
 }

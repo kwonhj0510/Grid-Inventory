@@ -32,11 +32,9 @@ public class InventoryController : MonoBehaviour
 
     private void CreateRandomItem()
     {
-        InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
-        selectItem = inventoryItem;
-
+        InventoryItem inventoryItem = Instantiate(itemPrefab, canvasTransform).GetComponent<InventoryItem>();
         rectTransform = inventoryItem.GetComponent<RectTransform>();
-        rectTransform.SetParent(canvasTransform);
+        selectItem = inventoryItem;
 
         int selectedItemId = Random.Range(0, items.Count);
         inventoryItem.Set(items[selectedItemId]);
@@ -45,7 +43,7 @@ public class InventoryController : MonoBehaviour
     private void LeftMouseButtonPress()
     {
         Vector2Int tileGridPosition = (selectItemGrid.GetTileGridPosition(Input.mousePosition));    //그리드 셀 위치
-        Debug.Log(selectItemGrid.GetTileGridPosition(Input.mousePosition));
+        Debug.Log($"선택한 Cell 위치: {selectItemGrid.GetTileGridPosition(Input.mousePosition)}");
         if (selectItem == null)
         {
             PickUpItem(tileGridPosition);
@@ -65,7 +63,7 @@ public class InventoryController : MonoBehaviour
     private void PickUpItem(Vector2Int tileGridPosition)
     {
         selectItem = selectItemGrid.PickUpItem(tileGridPosition.x, tileGridPosition.y); //아이템 선택
-        Debug.Log(selectItem);
+
         if (selectItem != null)
         {
             rectTransform = selectItem.GetComponent<RectTransform>();
