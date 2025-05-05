@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0877e4ee60d0f9b428f2081fb67aa604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectItemGrid: {fileID: 0}
   items:
   - {fileID: 11400000, guid: 1677fcce752a45543bc65018bc02ef04, type: 2}
   - {fileID: 11400000, guid: dbe2dd335b2208f43b9d0a0bfd85f968, type: 2}
@@ -289,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1ebc73a66e8f04896a0e06921a4d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlighter: {fileID: 0}
+  highlighter: {fileID: 2022410237}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +756,7 @@ GameObject:
   - component: {fileID: 2022410239}
   - component: {fileID: 2022410238}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Highlighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +778,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960, y: 540}
+  m_AnchoredPosition: {x: 930.6, y: 591}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022410238
@@ -795,7 +794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
